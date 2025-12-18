@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kislap - Settings</title>
+    <link rel="stylesheet" href="../src/css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="../index.html" class="logo">Kislap ✨</a>
+        <nav class="nav-links">
+            <a href="profile.html">Profile 🎓</a>
+            <a href="settings.html" class="active">Settings ⚙️</a>
+            <a href="#" id="logout-btn">Log Out ➡️</a>
+        </nav>
+        <button id="nav-toggle" class="mobile-menu-btn">☰</button>
+    </header>
+
+    <main class="feed-container">
+        <h1>Account Settings 🛠️</h1>
+
+        <section class="card settings-section">
+            <h2>Security & Privacy</h2>
+            <div class="setting-item">
+                <label>Change Password:</label>
+                <button class="kislap-btn secondary-btn">Update Password</button>
+            </div>
+            <div class="setting-item">
+                <label>2-Factor Authentication:</label>
+                <span class="status-badge status-on">ON</span>
+            </div>
+        </section>
+
+        <section class="card settings-section">
+            <h2>Content Preferences</h2>
+            <div class="setting-item">
+                <label>Filter Low-Effort Content:</label>
+                <span class="status-badge status-on">Strict Mode (Default)</span>
+            </div>
+            <p class="note">Kislap automatically enforces a **No Brainrot** policy. This cannot be turned off.</p>
+        </section>
+        
+        <section class="card settings-section">
+            <h2>Account Actions</h2>
+            <button class="kislap-btn warning-btn" onclick="alert('This action is simulated and cannot be undone.');">Deactivate Account</button>
+        </section>
+    </main>
+
+    <script src="../src/js/main.js"></script>
+</body>
+</html>

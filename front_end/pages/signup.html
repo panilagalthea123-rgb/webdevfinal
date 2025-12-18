@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kislap - Sign Up 📝</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../src/css/style.css"> 
+</head>
+<body class="auth-body">
+    <div class="auth-container card">
+        <h1 class="logo-auth">Kislap ✨</h1>
+        <h2>Create Your Account</h2>
+        <form id="signup-form" class="auth-form">
+            <div class="form-group">
+                <label for="new-username">Username</label>
+                <input type="text" id="new-username" required>
+            </div>
+            <div class="form-group">
+                <label for="new-email">School Email</label>
+                <input type="email" id="new-email" required>
+            </div>
+            <div class="form-group">
+                <label for="new-password">Password</label>
+                <input type="password" id="new-password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" required>
+            </div>
+            <button type="submit" class="kislap-btn primary-btn">Sign Up 🚀</button>
+        </form>
+        <p class="auth-footer">Already a member? <a href="login.html">Log In.</a></p>
+    </div>
+
+    <script src="../src/js/auth.js"></script>
+</body>
+</html>
