@@ -1,0 +1,414 @@
+
+
+:root {
+    
+    --kislap-bg-dark: #121212;      
+    --kislap-card-dark: #1e1e1e;    
+    --kislap-text-light: #e0e0e0;   
+    --kislap-muted-text: #b0b0b0;   
+    --kislap-border-dark: #333333;  
+    --kislap-input-bg: #2a2a2a;     
+
+    
+    --kislap-blue: #3a86ff;        
+    --kislap-pink: #ff006e;        
+    --kislap-purple: #8338ec;      
+    --kislap-orange: #fb5607;      
+    --kislap-red: #e63946;         
+    
+    
+    --card-shadow: 0 6px 25px rgba(0, 0, 0, 0.4); 
+    --hover-lift: translateY(-4px); 
+    --transition-speed: 0.3s ease-in-out;
+
+    
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--kislap-bg-dark); 
+    color: var(--kislap-text-light);
+    font-family: var(--font-body); 
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    color: var(--kislap-blue);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+a:hover {
+    color: var(--kislap-pink);
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading); /* Apply Montserrat to headings */
+    color: var(--kislap-text-light); 
+}
+
+/* --- Card & Section Styling --- */
+.card {
+    background-color: var(--kislap-card-dark); 
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 15px; 
+    box-shadow: var(--card-shadow);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    border: 1px solid rgba(255, 255, 255, 0.08); 
+}
+.card:hover {
+    transform: var(--hover-lift);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7); 
+}
+
+/* --- Buttons --- */
+.kislap-btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 50px; 
+    font-family: var(--font-heading); 
+    font-weight: 700;
+    cursor: pointer;
+    transition: all var(--transition-speed);
+    margin-top: 15px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 0.95em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0.3); 
+}
+.primary-btn {
+    background-color: var(--kislap-blue);
+    color: white;
+    box-shadow: 0 6px 0 var(--kislap-purple); 
+}
+.primary-btn:hover {
+    background-color: var(--kislap-purple);
+    transform: translateY(-4px); 
+    box-shadow: 0 8px 0 var(--kislap-pink);
+}
+.primary-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 0 var(--kislap-purple);
+}
+.secondary-btn {
+    background-color: #4a4a4a; 
+    color: var(--kislap-text-light);
+    box-shadow: 0 4px 0 #2a2a2a;
+}
+.secondary-btn:hover {
+    background-color: #5a5a5a;
+    transform: var(--hover-lift);
+    box-shadow: 0 6px 0 #3a3a3a;
+}
+.warning-btn {
+    background-color: var(--kislap-orange);
+    color: white;
+    box-shadow: 0 6px 0 #9d4207; 
+}
+.warning-btn:hover {
+    background-color: var(--kislap-red); 
+    transform: var(--hover-lift);
+    box-shadow: 0 8px 0 #c22934;
+}
+
+/* --- Action Buttons (Like/Comment/Atomize) --- */
+.action-btn {
+    background-color: #2a2a2a; 
+    border: 1px solid var(--kislap-border-dark); 
+    color: var(--kislap-text-light);
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 1.1em;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+.action-btn:hover {
+    color: var(--kislap-pink);
+    background-color: #383838;
+    transform: scale(1.03); 
+}
+
+/* --- Navbar (Fixed, Modern) --- */
+.navbar {
+    position: sticky; 
+    top: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #331454 0%, #153c7a 100%); 
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+}
+.logo {
+    font-family: var(--font-heading); 
+    font-weight: 800;
+    font-size: 2em;
+    color: white;
+    text-shadow: 0 0 10px var(--kislap-pink); 
+}
+.navbar nav a {
+    color: white;
+    margin-left: 30px;
+    font-weight: 500;
+    font-size: 1.05em;
+    transition: color var(--transition-speed), transform var(--transition-speed);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+.navbar nav a:hover {
+    color: var(--kislap-pink);
+    transform: translateY(-2px) scale(1.02);
+    text-decoration: none;
+}
+.mobile-menu-btn {
+    display: none; 
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8em;
+    cursor: pointer;
+    transition: transform var(--transition-speed);
+}
+.mobile-menu-btn:hover {
+    transform: scale(1.1);
+}
+
+/* --- Authentication Pages (Login/Signup) --- */
+.auth-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #000000, #1a1a1a); 
+    padding: 20px;
+}
+.auth-container {
+    background-color: var(--kislap-card-dark); 
+    border: 1px solid #333;
+    padding: 40px; 
+    border-radius: 20px; 
+}
+.auth-container h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: var(--kislap-text-light);
+}
+.auth-form input {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--kislap-input-bg); 
+    color: var(--kislap-text-light);
+    border: 1px solid var(--kislap-border-dark);
+    border-radius: 10px;
+    font-size: 1em;
+    font-family: var(--font-body); 
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+.auth-form input:focus {
+    border-color: var(--kislap-blue);
+    box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.3); 
+    outline: none;
+}
+
+
+/* --- Main Feed Layout --- */
+.feed-container {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* --- Post Creation Area Enhancements (IG/TikTok Style) --- */
+.post-box {
+    padding: 25px;
+    border-radius: 20px; /* Make the box itself more rounded */
+}
+
+.post-box h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px; 
+    color: var(--kislap-purple);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.post-input-wrapper {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start; /* Align PFP and textarea to the top */
+    margin-bottom: 15px;
+}
+
+.post-pfp-small {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0; 
+    margin-top: 5px; 
+    border: 2px solid var(--kislap-blue); 
+    box-shadow: 0 0 0 1px rgba(58, 134, 255, 0.2);
+}
+
+.ig-textarea {
+    width: 100%;
+    min-height: 80px; 
+    padding: 12px 18px; 
+    background-color: var(--kislap-input-bg);
+    color: var(--kislap-text-light);
+    border: 1px solid var(--kislap-border-dark); 
+    border-radius: 20px; /* Highly rounded corners */
+    margin-bottom: 0; 
+    resize: vertical;
+    font-size: 1.05em;
+    font-family: var(--font-body); 
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+.ig-textarea:focus {
+    border-color: var(--kislap-pink);
+    box-shadow: 0 0 0 4px rgba(255, 0, 110, 0.2); 
+    outline: none;
+}
+
+.post-controls {
+    display: flex;
+    justify-content: flex-end; /* Push buttons to the right */
+    align-items: center;
+    gap: 10px;
+    padding-top: 10px; 
+}
+.post-controls .kislap-btn {
+    margin-top: 0;
+}
+
+.small-btn {
+    padding: 8px 15px; 
+    font-size: 0.8em; 
+    border-radius: 50px;
+}
+.secondary-btn.small-btn {
+    background-color: #333;
+    color: var(--kislap-muted-text);
+    box-shadow: none; 
+}
+.secondary-btn.small-btn:hover {
+    background-color: #444;
+    transform: none; 
+    color: var(--kislap-text-light);
+}
+
+.feed-container h2 {
+    font-family: var(--font-heading);
+    font-size: 1.8em;
+    color: var(--kislap-blue);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* --- Post Cards (Content) --- */
+.post {
+    border-left: 6px solid var(--kislap-blue); 
+    padding: 20px 25px;
+    position: relative;
+}
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.pfp {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 12px;
+    border: 3px solid var(--kislap-pink);
+    box-shadow: 0 0 0 2px rgba(255, 0, 110, 0.3), 0 0 10px rgba(255, 0, 110, 0.1); 
+}
+.post-header h4 {
+    font-family: var(--font-body); 
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--kislap-text-light);
+}
+.post p {
+    margin-bottom: 15px;
+    font-size: 1.05em;
+    color: var(--kislap-text-light); 
+}
+
+/* --- REAL MEDIA DISPLAY STYLING (The Fix) --- */
+/* This styling applies to the <img> and <video> tags with class .post-media-content */
+.post-media-content {
+    display: block;
+    width: 100%;
+    max-height: 450px; /* Cap the height for consistency */
+    object-fit: cover; /* Ensures media fills the frame nicely */
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--kislap-border-dark);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+    transition: transform 0.3s ease-in-out;
+}
+
+.post-media-content:hover {
+    transform: scale(1.005);
+}
+
+video.post-media-content {
+    background-color: black;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .navbar { padding: 15px 20px; }
+    .nav-links {
+        /* FIXED: Ensure mobile menu is hidden by default and stacks vertically */
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 80px; 
+        left: 0;
+        width: 100%;
+        background: linear-gradient(90deg, #331454 0%, #153c7a 100%);
+        box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        padding: 15px 0;
+    }
+    .nav-links.active { display: flex; } /* JavaScript toggles this to show the menu */
+    .mobile-menu-btn { display: block; } 
+    
+    /* Center text area in mobile view */
+    .post-input-wrapper {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .post-controls {
+        justify-content: space-between;
+    }
+    .kislap-btn {
+        width: auto;
+    }
+}

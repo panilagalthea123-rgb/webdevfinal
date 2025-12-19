@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Frontend</title>
+</head>
+<body>
+
+<h2>Register</h2>
+<input id="r-username" placeholder="Username"><br><br>
+<input id="r-email" placeholder="Email"><br><br>
+<input id="r-password" type="password" placeholder="Password"><br><br>
+<button onclick="register()">Register</button>
+
+<hr>
+
+<h2>Create Post</h2>
+<input id="p-title" placeholder="Title"><br><br>
+<input id="p-body" placeholder="Body"><br><br>
+<input id="p-userId" placeholder="User ID (use 1)"><br><br>
+<button onclick="createPost()">Create Post</button>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script>
+async function register() {
+  try {
+    const res = await axios.post("http://127.0.0.1:8000/register", {
+      username: document.getElementById("r-username").value,
+      email: document.getElementById("r-email").value,
+      password: document.getElementById("r-password").value,
+    });
+    alert(res.data.message);
+  } catch (err) {
+    alert("Register failed");
+  }
+}
+
+async function createPost() {
+  try {
+    const res = await axios.post("http://127.0.0.1:8000/posts", {
+      title: document.getElementById("p-title").value,
+      body: document.getElementById("p-body").value,
+      userId: Number(document.getElementById("p-userId").value),
+    });
+    alert(res.data.message);
+  } catch (err) {
+    alert("Post failed");
+  }
+}
+</script>
+
+</body>
+</html>
